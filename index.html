@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mindfully</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div>
+      <nav class="position-relative navbar flex-wrap py-4 px-4 px-md-10 navbar-expand-lg navbar-light bg-white shadow-lg">
+        <div class="container-fluid">
+          <a class="d-md-none navbar-brand" href="#">
+            <img src="./images/noun-mental-health-4691073.png" width="48" height="48" class="d-inline-block align-text-top me-2" alt="">
+          </a>
+          <button class="d-lg-none ms-auto btn bg-light p-0 d-flex justify-content-center align-items-center rounded-circle" style="width: 50px; height: 50px" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_LC_logocenter" aria-controls="navbar_LC_logocenter" aria-expanded="false" aria-label="Toggle navigation">
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+            </svg>
+          </button>
+          <div class="d-none d-md-block position-absolute top-50 start-50 translate-middle">
+            <a class="navbar-brand" href="#">
+              <img src="./images/noun-mental-health-4691073.png" width="48" height="48" class="d-inline-block align-text-top me-2 img-fluid" alt="">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar_LC_logocenter">
+            <div class="live-shortcode me-auto text-end">
+              <!--  lc_nav_menu -->
+              <ul id="menu-menu-1" class="navbar-nav">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739 mx-3 text-start">
+                  <!-- Menu -->
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738">
+                  <a href="#to-do-bg" class="nav-link"><b>To-Do App</b></a>
+                </li>
+              </ul>
+              <!--lc_nav_menu -->
+            </div>
+            <div class="live-shortcode ms-auto">
+              <!--  lc_nav_menu -->
+              <ul id="menu-secondary" class="navbar-nav">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown nav-item nav-item-33131">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Menu</a>
+                  <ul class="dropdown-menu depth_0">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33132">
+                      <a href="#" class="dropdown-item">Home</a>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33137">
+                      <a href="#about-us" class="dropdown-item">About Us</a>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33136">
+                      <a href="#" class="dropdown-item">Contact Us</a>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33138">
+                      <a href="#" class="dropdown-item">Portfolio</a>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33139">
+                      <a href="#" class="dropdown-item">Blog</a>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33140">
+                      <a href="#to-do-bg" class="dropdown-item"><b>To-Do App</b></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-4">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="./images/pngwing.com.png" class="d-block mx-lg-auto img-fluid wp-image-1461" alt="" loading="lazy" width="640">
+          </div>
+          <div class="col-lg-6">
+            <div class="lc-block mb-3">
+              <div>
+                <h1 class="fw-bold display-3">Start a better you from within today.</h1>
+              </div>
+            </div>
+
+            <div class="lc-block mb-5">
+              <div>
+                <p class="lead text-muted">Just like visiting the doctor for a stomach ache, it's essential to tend to your heartaches with care and compassion for a happier, healthier you.</p>
+              </div>
+            </div>
+
+            <div class="lc-block d-flex flex-column flex-sm-row justify-content-center justify-content-md-start">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#serviceModal">Book an appointment with us now!</button>
+
+              <div class="modal fade" id="serviceModal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Available sessions</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <form onsubmit="submitOrder(event)">
+                      <div class="modal-body">
+                        <div>
+                          <label for="service" class="form-label">Select a program you'd like to book</label>
+                          <select class="form-select" id="service">
+                            <option selected disabled>Programs</option>
+                            <option>Holistic wellness coaching</option>
+                            <option>Holistic therapy session</option>
+                            <option>Mindful workshop</option>
+                            <option>Emotional well-being courses</option>
+                          </select>
+                        </div>
+                        <div class="mb-2 mt-2">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="mb-2">
+                          <label for="email" class="form-label">E-mail address</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                          <p>We will e-mail you for booking details and payment methods for further confirmation.</p>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Book an appointment!</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lc-block text-left text-md-start">
+          <a class="text-decoration-none" href="#discover">
+            <div class="d-inline-flex align-items-baseline">
+              <p>Discover More.</p>
+            </div>
+          </a>
+        </div>
+        <!--lc-block -->
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-light py-4" id="discover">
+      <div class="container py-lg-7">
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="lc-block mb-4 pb-3 text-center text-md-start"></div>
+
+            <div class="lc-block mb-6 mb-md-0">
+              <div>
+                <h2 class="h4">Coaching services</h2>
+                <p class="lead">Personalized guidance for your journey to inner peace.&nbsp;<br></p>
+              </div>
+            </div>
+          </div>
+          <!--col -->
+          <div class="col-md-4">
+            <div class="lc-block mb-4 pb-3 text-center text-md-start"></div>
+
+            <div class="lc-block mb-6 mb-md-0">
+              <div>
+                <h2 class="h4">Resources library&nbsp;</h2>
+                <p class="lead">Access mindfulness tools for your daily practice.</p>
+              </div>
+            </div>
+          </div>
+          <!--col -->
+          <div class="col-md-4">
+            <div class="lc-block mb-4 pb-3 text-center text-md-start"></div>
+
+            <div class="lc-block mb-6 mb-md-0">
+              <div>
+                <h2 class="h4">To-Do App</h2>
+                <p class="lead">Stay focused with our integrated to-do app.&nbsp;<br></p>
+              </div>
+            </div>
+          </div>
+          <!--col -->
+        </div>
+      </div>
+    </section>
+
+    <!-- To-Do -->
+    <section id="to-do-bg" class="py-4 border-bottom">
+      <div class="container to-do-con">
+        <h1 class="text-center mb-2">To-Do App</h1>
+        <p class="text-center mb-3">Start your day and plan ahead.</p>
+        <form id="todoForm" class="mb-3" onsubmit="addTodo()">
+          <div class="input-group">
+            <input type="text" id="todoInput" class="form-control" placeholder="Add a new task" aria-label="Task" required>
+            <button class="btn btn-primary" type="submit">Add</button>
+          </div>
+        </form>
+        <ul id="todoList" class="list-group"></ul>
+        <button id="clearBtn" class="btn btn-danger mt-3" onclick="clearTodo()">Clear All</button>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="py-5" id="about-us">
+      <div class="container py-lg-5">
+        <div class="row align-items-center min-vh-50">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <div class="card bg-light shadow-sm lc-block p-4">
+              <div class="lc-block">
+                <img class="img-fluid" src="./images/pngwing-headscribble.com.png" width="512" alt="Image desc">
+              </div>
+              <div class="lc-block mb-4">
+                <div>
+                  <h2>You're having a normal reaction to an abnormal situation</h2>
+
+                  <p>Understanding that your emotional response is a natural adaptation to the unique challenges you're facing underscores the significance of acknowledging and addressing your mental health needs with compassion and care.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--col -->
+          <div class="col-lg-5 offset-lg-1">
+            <div class="lc-block mb-5">
+              <div>
+                <h2>About Us</h2>
+
+                <p class="lead">At Mindfully, we're dedicated to guiding you on a journey of mindfulness and self-discovery through personalized coaching, resources, and tools.</p>
+              </div>
+            </div>
+
+            <div class="row row-cols-2 w-100">
+              <div class="lc-block">
+                <div class="d-inline-flex">
+                  <div class="ms-2 align-self-center">
+                    <p>Mindful coaching expert</p>
+                  </div>
+                </div>
+              </div>
+              <!--lc-block -->
+
+              <div class="lc-block">
+                <div class="d-inline-flex">
+                  <div class="ms-2 align-self-center">
+                    <p>Curated resource library</p>
+                  </div>
+                </div>
+              </div>
+              <!--lc-block -->
+            </div>
+            <div class="row row-cols-2 w-100">
+              <div class="lc-block">
+                <div class="d-inline-flex">
+                  <div class="ms-2 align-self-center">
+                    <p>Practical tools available</p>
+                  </div>
+                </div>
+              </div>
+              <!--lc-block -->
+
+              <div class="lc-block">
+                <div class="d-inline-flex">
+                  <div class="ms-2 align-self-center">
+                    <p>Empowering inner growth</p>
+                  </div>
+                </div>
+              </div>
+              <!--lc-block -->
+            </div>
+          </div>
+          <!--col -->
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-6">
+      <div class="container py-md-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="lc-block mb-5">
+              <div>
+                <h3 class="text-primary">Self-care is not selfish.</h3>
+
+                <p class="">It is essential for nurturing mental well-being and sustaining resilience in the face of life's challenges.</p>
+              </div>
+            </div>
+
+            <div class="lc-block mb-4">
+              <div class="d-inline-flex">
+                <div class="ms-2 align-self-center">
+                  <h5>Empowering mental well-being journey</h5>
+
+                  <p class="text-muted">Our service is dedicated to empowering individuals on their mental well-being journey, providing personalized support and guidance every step of the way.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lc-block">
+              <div class="d-inline-flex">
+                <div class="ms-2 align-self-center">
+                  <h5>Personalized support, lasting harmony</h5>
+                  <p class="text-muted">With personalized support and resources, we strive to ensure lasting wellness for all our clients.</p>
+                </div>
+              </div>
+            </div>
+            <!--lc-block -->
+          </div>
+          <!--col -->
+          <div class="col-lg-7">
+            <div class="lc-block">
+              <img class="img-fluid mx-auto py-4" src="./images/woman-selfcare.png" width="640" alt="">
+            </div>
+          </div>
+          <!--col -->
+        </div>
+      </div>
+    </section>
+    <section class="bg-body py-6 py-md-0">
+      <div class="container py-md-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5 order-lg-2">
+            <div class="lc-block mb-4">
+              <div>
+                <h3 class="text-primary">
+                  Your well-being, our priority;
+                  <br>
+                  We are always here for you.
+                </h3>
+
+                <p>Experience round-the-clock support and a variety of tailored sessions, ensuring personalized care throughout your journey.</p>
+              </div>
+            </div>
+            <div class="lc-block row row-cols-3 align-items-center">
+              <div class="col">
+                <h3 class="h2 mb-0 text-peimary">100%</h3>
+                <span class="mb-0 text-muted"> Satisfaction </span>
+              </div>
+              <div class="col">
+                <h3 class="h2 mb-0 text-peimary">24/7</h3>
+                <span class="mb-0 text-muted"> Support </span>
+              </div>
+              <div class="col">
+                <h3 class="h2 mb-0 text-peimary">+30</h3>
+                <span class="mb-0 text-muted">Professionals </span>
+              </div>
+            </div>
+          </div>
+          <!--col -->
+          <div class="col-lg-7">
+            <div class="lc-block">
+              <img class="img-fluid mx-auto py-5" src="./images/heart-med.png" width="640" alt="">
+            </div>
+          </div>
+          <!--col -->
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light pt-2 pt-md-5">
+      <div class="py-5 container-fluid">
+        <div class="row text-center">
+          <div class="col-12">
+            <div class="lc-block mb-4">
+              <div>
+                <h2 class="display-4 fw-bold">Every day may not be good, <br>but there is something good in every day.</h2>
+              </div>
+            </div>
+            <div class="lc-block mb-4">
+              <div>
+                <p class="lead">Take the first step towards better mental health today. Explore our personalized programs and start your journey to emotional wellness.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lc-block text-secondary">
+            <div>
+              <p>Mindfully, Inc.</p>
+            </div>
+          </div>
+          <!--col -->
+        </div>
+      </div>
+    </section>
+    <section class="bg-light" style="margin-bottom: -30vh">
+      <div class="container py-5">
+        <div class="row justify-content-center py-4">
+          <!-- Single Price Plan Area -->
+          <div class="col-12 col-lg-5">
+            <div class="lc-block text-center py-5 rounded bg-white text-dark h-100">
+              <div class="lc-block mb-4">
+                <img src="./images/five.png" alt="" loading="lazy" class="img-fluid" style="width: 70%">
+              </div>
+              <div class="lc-block">
+                <div>
+                  <h2 class="fw-bold">Session Bundles</h2>
+                </div>
+              </div>
+
+              <div class="lc-block small">
+                <div>
+                  <p>
+                    Perfect for
+                    <strong>ongoing support and savings</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="lc-block small">
+                <div>
+                  <p>Starting from</p>
+                </div>
+              </div>
+              <div class="lc-block text-info display-4 font-weight-bold">
+                <span class="text-primary">$199</span>
+                <span class="text-muted rfs-6">/ bundle</span>
+              </div>
+              <div class="lc-block">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li class="py-2 lc-block">
+                    <span>Discounted rates for purchasing sessions in bulk</span>
+                  </li>
+                  <li class="py-2 lc-block">
+                    <span>Ongoing support for consistent progress</span>
+                  </li>
+                  <li class="py-2 lc-block">
+                    <span>Convenient package options available</span>
+                  </li>
+                </ul>
+                <div class="lc-block">
+                  <a class="btn btn-outline-primary" href="#" role="button">Subscribe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="lc-block text-center py-5 bg-light rounded h-100">
+              <div class="lc-block mb-4">
+                <img src="./images/one.png" alt="" loading="lazy" class="img-fluid" style="width: 70%">
+              </div>
+              <div class="lc-block">
+                <div>
+                  <h2 class="fw-bold">On-Demand Support</h2>
+                </div>
+              </div>
+              <div class="lc-block small">
+                <div>
+                  <p>
+                    Perfect for
+                    <strong>individuals exploring mental health services</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="lc-block small">
+                <div>
+                  <p>Starting from</p>
+                </div>
+              </div>
+              <div class="lc-block text-info display-4">
+                <span class="text-primary">$79</span>
+                <span class="text-muted rfs-6">/ session</span>
+              </div>
+              <div class="lc-block">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li class="py-2 lc-block">
+                    <span>Flexibility to try out sessions and gauge suitability</span>
+                  </li>
+                  <li class="py-2 lc-block">
+                    <span>Pay only for sessions utilized</span>
+                  </li>
+                  <li class="py-2 lc-block">
+                    <span>No long-term commitment required</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="lc-block">
+                <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal" href="#" role="button">Book a session</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-secondary bg-dark">
+      <div class="container" style="padding-top: 30vh">
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="col py-4">
+            <div class="lc-block d-flex">
+              <div class="px-4">
+                <div>
+                  <h5 class="text-white">How do I schedule a session?&nbsp;</h5>
+                  <p>Simply contact us through our website or phone number to book your appointment. We'll work with you to find a convenient time for your session.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col py-4">
+            <div class="lc-block d-flex">
+              <div class="px-4">
+                <div>
+                  <h5 class="text-white">What can I expect during a coaching/therapy session?</h5>
+                  <p>Each session is tailored to your needs and goals. You can expect a supportive and non-judgmental environment where you can discuss your concerns and work towards positive change.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 mb-5">
+          <div class="col py-4">
+            <div class="lc-block d-flex">
+              <div class="px-4">
+                <div>
+                  <h5 class="text-white">How many sessions will I need?</h5>
+                  <p class="">The number of sessions varies depending on your individual circumstances and goals. We'll work with you to develop a personalized plan that meets your needs and fits your schedule.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col py-4">
+            <div class="lc-block d-flex">
+              <div class="px-4">
+                <div>
+                  <h5 class="text-white">Is my information confidential?</h5>
+                  <p>Yes, confidentiality is of the utmost importance to us. Your information will be kept strictly confidential in accordance with ethical guidelines and legal requirements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="col-md-12">
+            <div class="lc-block text-center">
+              <span class="badge bg-secondary"> Get started </span>
+            </div>
+          </div>
+          <!--col -->
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="lc-block text-center pb-5">
+              <div>
+                <h2 class="display-4">Ready to prioritize your mental well-being?<br></h2>
+
+                <p>
+                  <br>Take the first step towards a healthier, happier you today.<br>
+                  Schedule your session now.
+                </p>
+              </div>
+            </div>
+            <div class="lc-block text-center mb-5">
+              <a class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#serviceModal" href="#" role="button">Book a session now -&gt;</a>
+            </div>
+          </div>
+          <!--col -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer here -->
+
+    <section class="bg-dark text-light">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="lc-block mb-4">
+              <img class="img-fluid" alt="logo" src="./images/white-logo.png" style="max-height: 10vh">
+            </div>
+            <div class="lc-block small">
+              <div>
+                <p><b>Mindfully, Inc.</b> is dedicated to guiding individuals on a journey of mindfulness and holistic well-being through personalized coaching and transformative resources.</p>
+              </div>
+            </div>
+            <!--lc-block -->
+            <div class="lc-block py-2">
+              <a class="text-decoration-none" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" fill="var(--bs-light)">
+                  <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                </svg>
+              </a>
+              <a class="text-decoration-none" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="var(--bs-light)">
+                  <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                  ></path>
+                </svg>
+              </a>
+              <a class="text-decoration-none" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="var(--bs-light)">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  ></path>
+                </svg>
+              </a>
+              <a class="text-decoration-none" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="1em" height="1em" fill="var(--bs-light)">
+                  <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                </svg>
+              </a>
+              <a class="text-decoration-none" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="var(--bs-light)">
+                  <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 offset-lg-1">
+            <div class="lc-block mb-4">
+              <div>
+                <h4>Get Started</h4>
+              </div>
+            </div>
+            <!--lc-block -->
+            <div class="lc-block small">
+              <div>
+                <p>Explore</p>
+                <p>Resources</p>
+                <p>Book a session</p>
+                <p>Learn more</p>
+              </div>
+            </div>
+            <!--lc-block -->
+          </div>
+          <div class="col-lg-2 offset-lg-1">
+            <div class="lc-block mb-4">
+              <div>
+                <h4>About us</h4>
+              </div>
+            </div>
+            <!--lc-block -->
+            <div class="lc-block small">
+              <div>
+                <p>Story</p>
+                <p>Work with us</p>
+                <p>Blog</p>
+                <p>News</p>
+              </div>
+            </div>
+            <!--lc-block -->
+          </div>
+          <div class="col-lg-2 offset-lg-1">
+            <div class="lc-block mb-4">
+              <div>
+                <h4>Contact us</h4>
+              </div>
+            </div>
+            <!--lc-block -->
+            <div class="lc-block small">
+              <div>
+                <p>Reach</p>
+                <p>Connect</p>
+                <p>Inquire</p>
+                <p>Engage</p>
+              </div>
+            </div>
+            <!--lc-block -->
+          </div>
+        </div>
+      </div>
+      <div class="py-5 container">
+        <div class="row">
+          <div class="col-6 small">
+            <div class="lc-block">
+              <div>
+                <p>Copyright ©2024 <b>Mindfully, Inc.</b></p>
+              </div>
+            </div>
+            <!--lc-block -->
+          </div>
+          <div class="col-6 text-end small">
+            <div class="lc-block">
+              <div>
+                <p>
+                  <a class="text-decoration-none" href="#">Certifications</a> -
+                  <a class="text-decoration-none" href="#">Terms &amp; Conditions</a>
+                </p>
+              </div>
+            </div>
+            <!--lc-block -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
